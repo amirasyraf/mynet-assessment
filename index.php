@@ -68,5 +68,66 @@ require_once 'crud.php';
                 </div>
             </div>
         </div>
+        <!-- ADD MODAL -->
+        <div class="modal" id="addmodal">
+            <a class="modal-overlay" aria-label="Close"></a>
+            <div class="modal-container">
+                <div class="modal-header">
+                    <a onclick="closeAddModal()" class="btn btn-clear float-right" aria-label="Close"></a>
+                    <div class="modal-title h5">Add Member</div>
+                </div>
+                <div class="modal-body">
+                    <div class="content">
+                        <form class="form" method="post">
+                            <label>Full Name</label>
+                            <input type="text" name="add-fullname" id="add-fullname" value="">
+                            <label>Mykad</label>
+                            <input type="text" name="add-mykad" id="add-mykad" value="">
+                            <label>Email</label>
+                            <input type="email" name="add-email" id="add-email" value="">
+                            <label>Date Registered</label>
+                            <input type="date" name="add-date_registered" id="add-date_registered" value="">
+                            <input class="btn btn-success" type="submit" name="add" value="Tambah">
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  ...
+                </div>
+            </div>
+        </div>
+        <!-- UPDATE MODAL -->
+        <div class="modal" id="updatemodal">
+            <a class="modal-overlay" aria-label="Close"></a>
+            <div class="modal-container">
+                <div class="modal-header">
+                    <a onclick="closeUpdateModal()" class="btn btn-clear float-right" aria-label="Close"></a>
+                    <div class="modal-title h5">Update</div>
+                </div>
+                <div class="modal-body">
+                    <div class="content">
+                        <form class="form" method="post">
+                            <label>Full Name</label>
+                            <input type="text" name="update-fullname" id="update-fullname" value="">
+                            <label>Mykad</label>
+                            <input type="text" name="update-mykad" id="update-mykad" value="">
+                            <label>Email</label>
+                            <input type="email" name="update-email" id="update-email" value="">
+                            <label>Date Registered</label>
+                            <input type="date" name="update-date_registered" id="update-date_registered" value="">
+                            <input type="hidden" name="update-id" id="update-id" value="">
+                            <input class="btn btn-success" type="submit" name="update" value="Update">
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  Amir Asyraf
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="src/js/index.js"></script>
+        <script type="text/javascript">
+            document.getElementById('add-date_registered').valueAsDate = new Date();
+        </script>
     </body>
 </html>
