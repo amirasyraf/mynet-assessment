@@ -1,6 +1,31 @@
 <?php
 
 function addMember() {
+	global $connection;
+
+	try {
+		$data = array(
+			"fullname" => $_POST['add-fullname'],
+	        "mykad"  => $_POST['add-mykad'],
+	        "email"     => $_POST['add-email'],
+	        "date_registered"       => $_POST['add-date_registered']
+	    );
+
+	    $sql = sprintf(
+	    	"INSERT INTO %s (%s) VALUES (%s)",
+		    "member",
+		    implode(", ", array_keys($data)),
+		    ":" . implode(", :", array_keys($data))
+		);
+
+		$statement = $connection->prepare($sql);
+	    $statement->execute($data);
+	    echo "<meta http-equiv='refresh' content='0'>";
+	}
+
+	catch(PDOException $error) {
+		echo $sql . "<br>" . $error->getMessage();
+	}
 }
 
 function retrieveMember() {
@@ -45,4 +70,7 @@ function deleteMember() {
 if (isset($_POST['update'])) {
 }
 if (isset($_POST['delete'])) {
+}
+if (isset($_POST['add'])) {
+	addMember();
 }
