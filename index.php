@@ -10,13 +10,8 @@ require_once 'database.php';
 require_once 'crud.php';
 
 function getRegisteredAge($date_registered) {
-    // $date_registered = explode("-", $date_registered);
-
-    // return (date("md", date("U", mktime(0, 0, 0, $date_registered[2], $date_registered[1], $date_registered[0]))) > date("md") ? ((date("Y")-$date_registered[0])-1):(date("Y")-$date_registered[0]));
-
-    $date_registered = new DateTime($date_registered); // Enter your birthday in YYYY-MM-DD format
-
-    return $date_registered->diff(new DateTime('now'))->format('%y');
+    $date_registered = new DateTime($date_registered);
+    return $date_registered->diff(new DateTime('now'))->format('%y'); // year = %y, month = %m, day = %d
 }
 ?>
 
