@@ -4,13 +4,17 @@ html {
 body {
 	min-height: 100%;
   	position: relative;
-	font-size: 0.6em;
+	font-size: 0.5em;
 	background-color: #fffefd;
 	background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23fff0f0' fill-opacity='0.46' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
+h3 {
+	font-size: 1.2em;
+}
+
 label {
-	font-size: 0.6em;	
+	font-size: 0.9em;	
 }
 .site-container {
 	width: 100%;
@@ -84,10 +88,39 @@ label {
 	right: 0%;
 }
 
+.btn-logout {
+    appearance: none;
+    background: #E53700;
+    border: .05rem groove white;
+    border-radius: .1rem;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: .8rem;
+    height: 1.8rem;
+    line-height: 1.2rem;
+    outline: 0;
+    padding: .25rem .4rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background .2s, border .2s, box-shadow .2s, color .2s;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap
+}
+
+.btn-logout:hover {
+    background: #C61E00;
+}
+
+.add-date_registered {
+	display: none;
+}
+
 @media only screen and (min-width: 600px) {
 
 	body {
-		font-size: 0.8em;
+		font-size: 0.6em;
 	}
 
 	.site-container {
@@ -108,19 +141,15 @@ label {
 @media only screen and (min-width: 800px) {
 
 	body {
-		font-size: 1em;
+		font-size: 0.8em;
 	}
 
 	.site-container {
-		width: 90%
+		width: 70%
 		font-size: 0.9em;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-	}
-
-	.login-container {
-		width: 40%;
 	}
 
 	.datatable {
@@ -136,6 +165,10 @@ label {
 
 @media only screen and (min-width: 960px) {
 
+	.login-container {
+		width: 70%;
+	}
+
 	.table.table-responsive {
 		display: table;
 		overflow-x: visible;
@@ -148,5 +181,11 @@ label {
 
 	.inline-wrapper * {
 		font-size: 0.9em;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.login-container {
+		width: 50%;
 	}
 }
