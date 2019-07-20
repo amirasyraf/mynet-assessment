@@ -3,7 +3,7 @@ require_once 'database.php';
 
 session_start();
 if ($_SESSION['loggedin']) {
-    header('Location: https://apps.amirasyraf.dev/mynett');
+    header('Location: https://apps.amirasyraf.dev/mynet-assessment');
     exit();
 }
 
@@ -12,7 +12,7 @@ if (isset($_POST['login'])) {
         $sql = "SELECT hash FROM user WHERE username = :username";
 
         $username = $_POST['username'];
-        $password = $_POST['password'];;
+        $password = $_POST['password'];
 
         $statement = $connection->prepare($sql);
         $statement->bindParam(':username', $username, PDO::PARAM_STR);
@@ -39,12 +39,14 @@ if (isset($_POST['login'])) {
 
 function authorized() {
     $_SESSION['loggedin'] = true;
-    header('Location: https://apps.amirasyraf.dev/mynett');
+    header('Location: https://apps.amirasyraf.dev/mynet-assessment');
     exit();
 }
 
 function unauthorized() {
-    echo "<meta http-equiv='refresh' content='0'>";
+    echo "<div class='incorrect_credential'>
+            Incorrect Credentials!
+          </div>";
 }
 
 ?>

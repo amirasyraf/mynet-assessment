@@ -2,7 +2,7 @@
 
 session_start();
 if (!($_SESSION['loggedin'])) {
-    header('Location: https://apps.amirasyraf.dev/mynett/login.php');
+    header('Location: https://apps.amirasyraf.dev/mynet-assessment/login.php');
     exit();
 }
 
@@ -48,7 +48,7 @@ function getRegisteredAge($date_registered) {
                         </thead>
                         <tbody>
                             <?php 
-                            foreach (retrieveMember() as $row) { ?>
+                            foreach (retrieveUser() as $row) { ?>
                                 <tr>
                                     <td><?php echo $row["fullname"]; ?></td>
                                     <td><?php echo $row["mykad"]; ?></td>
@@ -56,7 +56,8 @@ function getRegisteredAge($date_registered) {
                                     <td><?php echo $row["date_registered"]; ?></td>
                                     <td><?php echo getRegisteredAge($row["date_registered"]); ?></td>
                                     <td>
-                                        <div class="inline-wrapper testt">
+                                        <div class="inline-wrapper">
+                                            <!-- Perform XHR request to retrieve user data based on ID -->
                                             <button class="btn btn-primary" onclick="openUpdateModal(<?php echo $row["id"] ?> )">Update</button>
                                             <form method="post">
                                                 <input type="hidden" name="id" value="<?php echo $row["id"] ?>">
@@ -80,20 +81,22 @@ function getRegisteredAge($date_registered) {
             <div class="modal-container">
                 <div class="modal-header">
                     <a onclick="closeAddModal()" class="btn btn-clear float-right" aria-label="Close"></a>
-                    <div class="modal-title h5">Add Member</div>
+                    <div class="modal-title h5">Add User</div>
                 </div>
                 <div class="modal-body">
                     <div class="content">
                         <form class="form" method="post">
                             <label>Full Name</label>
-                            <input type="text" name="add-fullname" id="add-fullname" value="">
+                            <input type="text" name="add-fullname" id="add-fullname">
+                            <label>Username</label>
+                            <input type="text" name="add-username" id="add-username">
                             <label>Mykad</label>
-                            <input type="text" name="add-mykad" id="add-mykad" value="" maxlength="12">
+                            <input type="text" name="add-mykad" id="add-mykad" maxlength="12">
                             <label>Email</label>
-                            <input type="email" name="add-email" id="add-email" value="">
+                            <input type="email" name="add-email" id="add-email">
                             <div class="add-date_registered">
                                 <label>Date Registered</label>
-                                <input type="date" name="add-date_registered" id="add-date_registered" value="">
+                                <input type="date" name="add-date_registered" id="add-date_registered">
                             </div>
                             <input class="btn btn-success" type="submit" name="add" value="Tambah">
                         </form>
@@ -116,6 +119,8 @@ function getRegisteredAge($date_registered) {
                         <form class="form" method="post">
                             <label>Full Name</label>
                             <input type="text" name="update-fullname" id="update-fullname" value="">
+                            <label>Username</label>
+                            <input type="text" name="update-username" id="update-username" value="">
                             <label>Mykad</label>
                             <input type="text" name="update-mykad" id="update-mykad" value="" maxlength="12">
                             <label>Email</label>
@@ -125,10 +130,33 @@ function getRegisteredAge($date_registered) {
                             <input type="hidden" name="update-id" id="update-id" value="">
                             <input class="btn btn-success" type="submit" name="update" value="Update">
                         </form>
+                        <button class="btn btn-change-pass" onclick="openChangePassModal()" id="testt">Change Password</button>
                     </div>
                 </div>
                 <!-- <div class="modal-footer">
                   Amir Asyraf
+                </div> -->
+            </div>
+        </div>
+        <!-- CHANGE PASSWORD MODAL -->
+        <div class="modal" id="changepassmodal">
+            <a class="modal-overlay" aria-label="Close"></a>
+            <div class="modal-container">
+                <div class="modal-header">
+                    <a onclick="closeChangePassModal()" class="btn btn-clear float-right" aria-label="Close"></a>
+                    <div class="modal-title h5">Change Password</div>
+                </div>
+                <div class="modal-body">
+                    <div class="content">
+                        <form class="form" method="post">
+                            <label>New Password</label>
+                            <input type="hidden" name="change-pass-id" id="change-pass-id" value="">
+                            <input type="password" name="password">
+                            <input class="btn" type="submit" name="change-pass" id="change-pass" value="Change Password">
+                        </form>
+                    </div>
+                </div>
+                <!-- <div class="modal-footer">
                 </div> -->
             </div>
         </div>
