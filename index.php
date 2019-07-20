@@ -130,7 +130,10 @@ function getRegisteredAge($date_registered) {
                             <input type="hidden" name="update-id" id="update-id" value="">
                             <input class="btn btn-success" type="submit" name="update" value="Update">
                         </form>
-                        <button class="btn btn-change-pass" onclick="openChangePassModal()" id="testt">Change Password</button>
+                        <br>
+                        <div class="btn-change-pass">
+                            <button class="btn" onclick="openChangePassModal()">Change Password</button>
+                        </div>
                     </div>
                 </div>
                 <!-- <div class="modal-footer">

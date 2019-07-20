@@ -117,6 +117,10 @@ label {
 	display: none;
 }
 
+.btn-change-pass {
+	text-align: center;
+}
+
 @media only screen and (min-width: 600px) {
 
 	body {
@@ -186,6 +190,6 @@ label {
 
 @media only screen and (min-width: 1200px) {
 	.login-container {
-		width: 30%;
+		width: 50%;
 	}
 }

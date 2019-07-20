@@ -1,3 +1,19 @@
+<?php ob_start(); ?>
+    <style type="text/css">
+        .incorrect-credential {
+            position: fixed;
+            bottom: 0%;
+            left: 0%;
+            background-color: red;
+            color: white;
+            padding: 1em;
+        }
+    </style>
+    <div class='incorrect-credential'>
+        Incorrect Credentials!
+    </div>
+<?php $incorrect = ob_get_clean(); ?>
+
 <?php
 require_once 'database.php';
 
@@ -44,9 +60,8 @@ function authorized() {
 }
 
 function unauthorized() {
-    echo "<div class='incorrect_credential'>
-            Incorrect Credentials!
-          </div>";
+    global $incorrect;
+    echo $incorrect;
 }
 
 ?>
