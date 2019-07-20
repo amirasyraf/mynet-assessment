@@ -132,7 +132,7 @@ function getRegisteredAge($date_registered) {
                         </form>
                         <br>
                         <div class="btn-change-pass">
-                            <button class="btn" onclick="openChangePassModal()">Change Password</button>
+                            <button class="btn" onclick="openChangePassModal()">Tukar Password</button>
                         </div>
                     </div>
                 </div>
@@ -152,10 +152,10 @@ function getRegisteredAge($date_registered) {
                 <div class="modal-body">
                     <div class="content">
                         <form class="form" method="post">
-                            <label>New Password</label>
+                            <label>Password Baharu</label>
                             <input type="hidden" name="change-pass-id" id="change-pass-id" value="">
                             <input type="password" name="password">
-                            <input class="btn" type="submit" name="change-pass" id="change-pass" value="Change Password">
+                            <input class="btn" type="submit" name="change-pass" id="change-pass" value="Tukar">
                         </form>
                     </div>
                 </div>
