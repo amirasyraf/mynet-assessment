@@ -28,7 +28,7 @@ function getRegisteredAge($date_registered) {
         <title>Sistem Pendaftaran Ahli</title>
         <meta name="author" content="Amir Asyraf">
         <meta name="description" content="MYNET - Sistem Pendaftaran Ahli">
-        <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
         <link rel="stylesheet" href="src/css/spectre.css" type="text/css">
         <link rel="stylesheet" href="src/css/style.css" type="text/css">
     </head>
@@ -36,8 +36,8 @@ function getRegisteredAge($date_registered) {
         <div class="site-container">
             <div class="card">
                 <div class="card-header">
-                    <div class="card-title h5">Main Page</div>
-                    <div class="card-subtitle text-gray">Bla bla bla bla</div>
+                    <div class="card-title h5">Sistem Pendaftaran Ahli</div>
+                    <div class="card-subtitle text-gray">Maklumat Ahli</div>
                 </div>
                 <div class="card-body">
                     <table class="table table-striped table-hover table-responsive">
@@ -93,18 +93,19 @@ function getRegisteredAge($date_registered) {
                             <label>Full Name</label>
                             <input type="text" name="add-fullname" id="add-fullname" value="">
                             <label>Mykad</label>
-                            <input type="text" name="add-mykad" id="add-mykad" value="">
+                            <input type="text" name="add-mykad" id="add-mykad" value="" maxlength="12">
                             <label>Email</label>
                             <input type="email" name="add-email" id="add-email" value="">
-                            <label>Date Registered</label>
-                            <input type="date" name="add-date_registered" id="add-date_registered" value="">
+                            <div class="add-date_registered">
+                                <label>Date Registered</label>
+                                <input type="date" name="add-date_registered" id="add-date_registered" value="">
+                            </div>
                             <input class="btn btn-success" type="submit" name="add" value="Tambah">
                         </form>
                     </div>
                 </div>
-                <div class="modal-footer">
-                  ...
-                </div>
+                <!-- <div class="modal-footer">
+                </div> -->
             </div>
         </div>
         <!-- UPDATE MODAL -->
@@ -121,7 +122,7 @@ function getRegisteredAge($date_registered) {
                             <label>Full Name</label>
                             <input type="text" name="update-fullname" id="update-fullname" value="">
                             <label>Mykad</label>
-                            <input type="text" name="update-mykad" id="update-mykad" value="">
+                            <input type="text" name="update-mykad" id="update-mykad" value="" maxlength="12">
                             <label>Email</label>
                             <input type="email" name="update-email" id="update-email" value="">
                             <label>Date Registered</label>
@@ -131,13 +132,13 @@ function getRegisteredAge($date_registered) {
                         </form>
                     </div>
                 </div>
-                <div class="modal-footer">
+                <!-- <div class="modal-footer">
                   Amir Asyraf
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="sticky-logout">
-            <button class="btn" onclick="logout()">Log Keluar</button>
+            <button class="btn-logout" onclick="logout()">Log Keluar</button>
         </div>
         <script type="text/javascript" src="src/js/index.js"></script>
         <script type="text/javascript">

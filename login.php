@@ -56,7 +56,7 @@ function unauthorized() {
         <title>Login - Sistem Pendaftaran Ahli</title>
         <meta name="author" content="Amir Asyraf">
         <meta name="description" content="MYNET - Sistem Pendaftaran Ahli">
-        <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
         <link rel="stylesheet" href="src/css/spectre.css" type="text/css">
         <link rel="stylesheet" href="src/css/style.css" type="text/css">
     </head>
