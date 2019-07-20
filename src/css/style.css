@@ -1,0 +1,152 @@
+html {
+  height: 100%;
+}
+body {
+	min-height: 100%;
+  	position: relative;
+	font-size: 0.6em;
+	background-color: #fffefd;
+	background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23fff0f0' fill-opacity='0.46' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+label {
+	font-size: 0.6em;	
+}
+.site-container {
+	width: 100%;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/*LOGIN PAGE*/
+.login-container {
+	display: grid;
+	width: 60%;
+	margin: 0 auto 0 auto;
+	padding: 1.5em;
+	font-size: 1.5em;
+	background-color: #fffefd;
+	background-image: url("data:image/svg+xml,%3Csvg width='70' height='70' viewBox='0 0 70 70' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff6f0' fill-opacity='0.46' fill-rule='evenodd'%3E%3Cpath d='M0 0h35v35H0V0zm5 5h25v25H5V5zm5 5h15v15H10V10zm5 5h5v5h-5v-5zM40 5h25v25H40V5zm5 5h15v15H45V10zm5 5h5v5h-5v-5zM70 35H35v35h35V35zm-5 5H40v25h25V40zm-5 5H45v15h15V45zm-5 5h-5v5h5v-5zM30 40H5v25h25V40zm-5 5H10v15h15V45zm-5 5h-5v5h5v-5z'/%3E%3C/g%3E%3C/svg%3E");
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  	transition: 0.3s;
+}
+
+.login-container:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.login-header {
+	margin: 0 auto 0 auto;
+}
+
+.login-body {
+	margin: 1em auto 0 auto;
+}
+
+.login-footer {
+	margin: 1em auto 0 auto;
+}
+
+.login-form {
+	display: grid;
+	grid-row-gap: 0.7em;
+	grid-column-gap: 0.5em;
+}
+
+.login-button {
+	width: 60% !important;
+	margin: 0 auto 0 auto !important;
+}
+
+.table.table-responsive {
+    display: block;
+    overflow-x: auto;
+    padding-bottom: .75rem;
+    white-space: nowrap
+}
+
+.inline-wrapper * {
+	display: inline;
+}
+
+.form {
+	display: grid;
+	grid-row-gap: 10px;
+	width: 60%;
+	margin: 0 auto 0 auto;
+}
+
+.sticky-logout {
+	position: fixed;
+	top: 0%;
+	right: 0%;
+}
+
+@media only screen and (min-width: 600px) {
+
+	body {
+		font-size: 0.8em;
+	}
+
+	.site-container {
+		width: 90%;
+	}
+
+	.datatable {
+		max-width: 75%;
+		margin-right: auto; 
+		margin-left: auto;
+	}
+
+	.input-form {
+		max-width: 30%;
+	}
+}
+
+@media only screen and (min-width: 800px) {
+
+	body {
+		font-size: 1em;
+	}
+
+	.site-container {
+		width: 90%
+		font-size: 0.9em;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.login-container {
+		width: 40%;
+	}
+
+	.datatable {
+		max-width: 60%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.inline-wrapper * {
+		font-size: 0.7em;
+	}
+}
+
+@media only screen and (min-width: 960px) {
+
+	.table.table-responsive {
+		display: table;
+		overflow-x: visible;
+		white-space: normal;
+	    border-collapse: collapse;
+	    border-spacing: 0;
+	    text-align: left;
+	    width: 100%
+	}
+
+	.inline-wrapper * {
+		font-size: 0.9em;
+	}
+}
