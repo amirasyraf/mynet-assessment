@@ -81,7 +81,7 @@ function getRegisteredAge($date_registered) {
             <div class="modal-container">
                 <div class="modal-header">
                     <a onclick="closeAddModal()" class="btn btn-clear float-right" aria-label="Close"></a>
-                    <div class="modal-title h5">Add User</div>
+                    <div class="modal-title h5">Tambah User</div>
                 </div>
                 <div class="modal-body">
                     <div class="content">
@@ -112,7 +112,7 @@ function getRegisteredAge($date_registered) {
             <div class="modal-container">
                 <div class="modal-header">
                     <a onclick="closeUpdateModal()" class="btn btn-clear float-right" aria-label="Close"></a>
-                    <div class="modal-title h5">Update</div>
+                    <div class="modal-title h5">Kemaskini User</div>
                 </div>
                 <div class="modal-body">
                     <div class="content">
@@ -147,7 +147,7 @@ function getRegisteredAge($date_registered) {
             <div class="modal-container">
                 <div class="modal-header">
                     <a onclick="closeChangePassModal()" class="btn btn-clear float-right" aria-label="Close"></a>
-                    <div class="modal-title h5">Change Password</div>
+                    <div class="modal-title h5">Tukar Password</div>
                 </div>
                 <div class="modal-body">
                     <div class="content">
