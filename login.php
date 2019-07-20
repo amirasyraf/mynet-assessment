@@ -3,7 +3,7 @@ require_once 'database.php';
 
 session_start();
 if ($_SESSION['loggedin']) {
-    header('Location: https://apps.amirasyraf.dev/mynet');
+    header('Location: https://apps.amirasyraf.dev/mynett');
     exit();
 }
 
@@ -11,25 +11,25 @@ if (isset($_POST['login'])) {
     try {
         $sql = "SELECT hash FROM user WHERE username = :username";
 
-		$username = $_POST['username'];
-		$password = $_POST['password'];;
+        $username = $_POST['username'];
+        $password = $_POST['password'];;
 
-		$statement = $connection->prepare($sql);
-		$statement->bindParam(':username', $username, PDO::PARAM_STR);
-		$statement->execute();
+        $statement = $connection->prepare($sql);
+        $statement->bindParam(':username', $username, PDO::PARAM_STR);
+        $statement->execute();
 
-		$result = $statement->fetchAll();
+        $result = $statement->fetchAll();
 
-		$hash =  $result[0]['hash'];
+        $hash =  $result[0]['hash'];
 
-		if (count($result) > 0) {
-			if (password_verify($password, $hash))
-				authorized();
-			else
-				unauthorized();
-		}
-		else
-			unauthorized();
+        if (count($result) > 0) {
+            if (password_verify($password, $hash))
+                authorized();
+            else
+                unauthorized();
+        }
+        else
+            unauthorized();
     }
 
     catch(PDOException $error) {
@@ -38,8 +38,8 @@ if (isset($_POST['login'])) {
 }
 
 function authorized() {
-	$_SESSION['loggedin'] = true;
-    header('Location: https://apps.amirasyraf.dev/mynet');
+    $_SESSION['loggedin'] = true;
+    header('Location: https://apps.amirasyraf.dev/mynett');
     exit();
 }
 

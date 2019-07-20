@@ -8,6 +8,16 @@ if (!($_SESSION['loggedin'])) {
 
 require_once 'database.php';
 require_once 'crud.php';
+
+function getRegisteredAge($date_registered) {
+    // $date_registered = explode("-", $date_registered);
+
+    // return (date("md", date("U", mktime(0, 0, 0, $date_registered[2], $date_registered[1], $date_registered[0]))) > date("md") ? ((date("Y")-$date_registered[0])-1):(date("Y")-$date_registered[0]));
+
+    $date_registered = new DateTime($date_registered); // Enter your birthday in YYYY-MM-DD format
+
+    return $date_registered->diff(new DateTime('now'))->format('%y');
+}
 ?>
 
 <!DOCTYPE html>
@@ -37,6 +47,7 @@ require_once 'crud.php';
                                 <th>MyKad</th>
                                 <th>Email</th>
                                 <th>Tarik Daftar</th>
+                                <th>Usia Pendaftaran</th>
                                 <th>Operasi</th>
                             </tr>
                         </thead>
@@ -48,8 +59,9 @@ require_once 'crud.php';
                                     <td><?php echo $row["mykad"]; ?></td>
                                     <td><?php echo $row["email"]; ?></td>
                                     <td><?php echo $row["date_registered"]; ?></td>
+                                    <td><?php echo getRegisteredAge($row["date_registered"]); ?></td>
                                     <td>
-                                        <div class="inline-wrapper">
+                                        <div class="inline-wrapper testt">
                                             <button class="btn btn-primary" onclick="openUpdateModal(<?php echo $row["id"] ?> )">Update</button>
                                             <form method="post">
                                                 <input type="hidden" name="id" value="<?php echo $row["id"] ?>">
@@ -64,7 +76,6 @@ require_once 'crud.php';
                 </div>
                 <div class="card-footer">
                     <button class="btn btn-primary" onclick="openAddModal()">Tambah</button>
-                    <button class="btn" onclick="logout()">Logout</button>
                 </div>
             </div>
         </div>
@@ -124,6 +135,9 @@ require_once 'crud.php';
                   Amir Asyraf
                 </div>
             </div>
+        </div>
+        <div class="sticky-logout">
+            <button class="btn" onclick="logout()">Log Keluar</button>
         </div>
         <script type="text/javascript" src="src/js/index.js"></script>
         <script type="text/javascript">
