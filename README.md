@@ -2,6 +2,7 @@
 Basic CRUD system in PHP.
 ## TODO
 
+- Validation (client & server side)
 - More object-oriented approach
 - Clean code
 - RESTify the system
