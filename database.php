@@ -1,8 +1,8 @@
 <?php
 
 $host = "localhost";
-$username = "amir";
-$password = "mpc123!@#";
+$username = "";
+$password = "";
 $dbname = "mynet";
 $dsn        = "mysql:host=$host;dbname=$dbname";
 $options    = array(
