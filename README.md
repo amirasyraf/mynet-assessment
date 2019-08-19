@@ -9,3 +9,5 @@ Basic CRUD system in PHP.
 - Follow [PHP Standards Recommendations (PSRs)](https://www.php-fig.org/psr/), specifically:
 	- [PSR-1](https://www.php-fig.org/psr/psr-1/)
 	- [PSR-2](https://www.php-fig.org/psr/psr-2/)
+
+Working demo: https://apps.amirasyraf.dev/mynet-assessment
