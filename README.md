@@ -12,4 +12,4 @@ This was actually for a job interview assessment, of which I declined due to the
 	- [PSR-1](https://www.php-fig.org/psr/psr-1/)
 	- [PSR-2](https://www.php-fig.org/psr/psr-2/)
 
-Working demo: https://apps.amirasyraf.dev/mynet-assessment
+Working demo: https://apps.amirasyraf.dev/php-crud
