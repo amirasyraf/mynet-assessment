@@ -1,4 +1,4 @@
-# MYNET Assessment
+# PHP CRUD
 Basic CRUD work completed in 2 days
 ## TODO
 
