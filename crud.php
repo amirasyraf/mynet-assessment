@@ -5,6 +5,8 @@ function addUser() {
 
 	try {
 		$data = array(
+			"username" => $_POST['add-username'],
+			"hash" => password_hash('pass123', PASSWORD_DEFAULT),
 			"fullname" => $_POST['add-fullname'],
 	        "mykad"  => $_POST['add-mykad'],
 	        "email"     => $_POST['add-email'],

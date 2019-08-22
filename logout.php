@@ -2,5 +2,5 @@
 session_start();
 $_SESSION["loggedin"] = false;
 
-header("Location: https://apps.amirasyraf.dev/mynet-assessment"); 
+header("Location: https://apps.amirasyraf.dev/php-crud/login.php"); 
 exit();

@@ -2,7 +2,7 @@
 
 session_start();
 if (!($_SESSION['loggedin'])) {
-    header('Location: https://apps.amirasyraf.dev/mynet-assessment/login.php');
+    header('Location: https://apps.amirasyraf.dev/php-crud/login.php');
     exit();
 }
 
@@ -22,7 +22,7 @@ function getRegisteredAge($date_registered) {
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>Sistem Pendaftaran Ahli</title>
         <meta name="author" content="Amir Asyraf">
-        <meta name="description" content="MYNET - Sistem Pendaftaran Ahli">
+        <meta name="description" content="PHP CRUD">
         <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
         <link rel="stylesheet" href="src/css/spectre.css" type="text/css">
         <link rel="stylesheet" href="src/css/style.css" type="text/css">
