@@ -1,5 +1,5 @@
 # MYNET Assessment
-Basic CRUD system in PHP.
+Basic CRUD work completed in 2 days
 ## TODO
 
 - Validation (client & server side)
